@@ -32,7 +32,7 @@ def hashType():
     else:
         return h_type
 
-print("SHA256 checker\n")
+print("Hash Checker\n")
 filepath = input("Enter filepath: ")
 h_type = hashType()
 validHash = input("Enter expected hash: ")
