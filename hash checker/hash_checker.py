@@ -1,10 +1,12 @@
 import hashlib
 
 def hash(filepath, validHash, hashType):
-    if (hashType == "SHA1"):
+    if (hashType == 'SHA1'):
         h = hashlib.sha1()
-    elif (hashType == "SHA256"):
+    elif (hashType == 'SHA256'):
         h = hashlib.sha256()
+    elif (hashType == 'MD5'):
+        h = hashlib.md5()
     
     with open(filepath, 'rb') as file:
         byte_block = 0
@@ -21,10 +23,10 @@ def hash(filepath, validHash, hashType):
         print("\nFile hash is INVALID!")
 
 def hashType():
-    h_type = input("Hash type? [SHA1/SHA256]: ")
+    h_type = input("Hash type?\n[SHA1/SHA256/MD5]: ")
     h_type = h_type.upper()
     
-    if (h_type != 'SHA1') and (h_type != 'SHA256'):
+    if (h_type != 'SHA1') and (h_type != 'SHA256') and (h_type != 'MD5'):
         print("Invalid hash type")
         hashType()
     else:
