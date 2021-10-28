@@ -6,7 +6,7 @@ def hash(filepath, validHash, hashType):
     elif (hashType == 'SHA256'):
         h = hashlib.sha256()
     elif (hashType == 'SHA512'): 
-        h = hashlib.hashlib.sha512
+        h = hashlib.sha512
     elif (hashType == 'MD5'):
         h = hashlib.md5()
     
